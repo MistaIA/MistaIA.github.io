@@ -44,7 +44,7 @@ let
 function setup() 
 {
 	createCanvas(BG_WIDTH, BG_HEIGHT)
-		.parent(`#baobab-canvas`)
+		.parent(`#bokko-canvas`)
 	;
 	background(0, 0, 30);
 
