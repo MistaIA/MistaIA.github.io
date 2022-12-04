@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>My First App</title>
+    
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link type="image/png" sizes="96x96" rel="icon" href="favicon.png">
+
+    <!-- <script type="importmap" src="./js/importmap.js"></script> -->
+    <script src="https://unpkg.com/p5@1.5.0/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/yama-dev/js-count-module@v0.3.2/dist/js-count-module.js"></script>
+    <!-- <script src="https://unpkg.com/js-confetti@0.11.0/dist/js-confetti.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  </head>
+
+  <body>
+	<!-- region Final rendering -->
+	<div class="iacontent" style="display:none;">
+		<div class="ialoader">
+			<span class="countdown">HAPPY</span><br />
+			<span class="countdown">NEW YEAR</span><br />
+			<strong class="countdown">2023</strong><br />
+			<span class="countdown">🎊😃🎐</span>
+		</div>
+	</div>
+	<!-- endregion -->
+    <div class="container flex flex-col clex-wrap items-center px-4 mx-auto">
+		<main>
+			<div id="arcade-container">
+				<div id="baobab-canvas">
+				</div>
+				<div id="growing-countdown">
+					<div id="countdown-caption">Slowly and Steadily</div>
+	
+					<div class="countdown-box">
+						<span class="countdown countdown-day">00</span>
+						<span class="countdown-cap cap-day">日</span>
+						<span class="countdown countdown-hour">00</span>
+						<span class="countdown-cap cap-hour">時間</span>
+						<span class="countdown countdown-minute">00</span>
+						<span class="countdown-cap cap-minute">分</span>
+						<span class="countdown countdown-second">00</span>
+						<span class="countdown-cap cap-second">秒</span>
+					</div>
+				</div>
+			</div>
+		</main>
+		
+		<footer>
+			<div class="mt-6">
+				<p class="text-muted">
+					<small>
+						&copy; <span id="current-year"></span> &middot;
+						Build with <span class="text-danger" title="It is not about love but, Passion 😉 !">&hearts;</span> by
+						<a href="mailto:ismaelabbo46@gmail.com">IA</a>.
+					</small>
+				</p>
+			</div>
+		</footer>
+	</div>
+    <!-- footer script -->
+    <script src="./js/app.js" defer></script>
+  </body>
+</html>

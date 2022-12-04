@@ -1,0 +1,150 @@
+/*!
+ | @author Ismael
+ | @description
+ | @GitHub MistaIA
+ | @GitLab MistaIA
+ | @version 1.00
+ | 
+ | @contributors : @harrySign
+ */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap");
+
+body * {
+	font-family: "Ubuntu", "Cormorant Garamond", serif;
+}
+
+a {
+    color: #007bff;
+}
+
+/* region Final rendering */
+.iacontent{
+    display : none;
+    width : 100%;
+    height : 100%;
+    background-color : rgba(0, 0, 0, 0.7);
+    transition : all ease 0.5s;
+
+    position : fixed;
+    z-index : 1;
+
+    margin : auto;
+	text-align: center;
+	place-items: center;
+}
+.iacontent .countdown {
+	font-size: 8vw;
+	color: whitesmoke;
+}
+/* endregion */
+
+/* region Canvas */
+#baobab-canvas {
+	transition: all 2s ease-in-out;
+}
+
+#countdown-caption {
+	margin: 0 auto 0.5rem;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	font-size: 2.75vw;
+}
+
+.countdown-box {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+	vertical-align: bottom;
+	margin: 0 auto;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.countdown {
+	min-width: 1em;
+	font-weight: 400;
+	font-size: 16.429vw;
+	line-height: .65;
+	/* font-family: "Cormorant Infant", "Cormorant Garamond", serif; */
+	letter-spacing: -3px;
+	white-space: nowrap;
+}
+
+.countdown-cap {
+	margin-left: -0.3125rem;
+	font-size: 2.429vw;
+	line-height: 1;
+}
+/* endregion */
+
+/* region General purposes */
+footer {
+	font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-muted {
+    color: #6c757d!important;
+}
+
+.text-danger {
+	color: #dc3545;
+}
+
+@media screen and (max-width: 767px){
+	#countdown-caption {
+		margin-bottom: 2.125rem;
+		font-size: 6.933vw;
+	}
+	.countdown {
+		min-width: 1em;
+		font-size: 20.267vw;
+		letter-spacing: -2px;
+	}
+	.countdown-cap {
+		margin-left: -2px;
+		font-size: 2.933vw;
+	}
+}
+
+@media screen and (min-width: 1400px){
+	#countdown-caption {
+		font-size: 3.4375em;
+	}
+	.countdown {
+		font-size: 14.375em;
+	}
+	.countdown-cap {
+		font-size: 2.125em;
+	}
+}
+
+@media screen and (max-width: 767px) and (min-width: 1400px){
+	#countdown-caption {
+		font-size: 6.07em;
+	}
+	.countdown {
+		font-size: 17.73em;
+	}
+	.countdown-cap {
+		font-size: 2.57em;
+	}
+}
+/* endregion */
