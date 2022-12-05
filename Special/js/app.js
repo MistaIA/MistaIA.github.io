@@ -10,9 +10,6 @@
 
 
 const
-	BG_WIDTH		= 1080,
-	BG_HEIGHT		= 850,
-
 	arcadeContainer	= document.querySelector(`#arcade-container`),
 	growingTimer	= document.querySelector(`#growing-countdown`),
 
@@ -26,6 +23,8 @@ const
 	});
 ;
 let
+	BG_WIDTH		= 980,
+	BG_HEIGHT		= 850,
 	initialWidth	= sideWidth = 180,
 	initialHeight	= sideHeight = 90,
 	strokeColor		= 255,
@@ -95,7 +94,7 @@ function draw()
 
 		growthGuard		= 2;
 
-		rotationAngle	= .49;
+		rotationAngle	= .38;
 		edgeReduction	= .7;
 		widthReduction	= .58;
 	}
