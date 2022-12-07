@@ -10,9 +10,6 @@
 
 
 const
-	BG_WIDTH		= 1080,
-	BG_HEIGHT		= 850,
-
 	arcadeContainer	= document.querySelector(`#arcade-container`),
 	growingTimer	= document.querySelector(`#growing-countdown`),
 
@@ -21,11 +18,14 @@ const
 
 	DATE_RANGE		= createEnum({
 		'START_AGE_GROWTH': 25,
-		'MEDIUM_AGE_GROWTH': 15,
-		'THIRD_AGE_GROWTH': 7,
-	});
+		'MEDIUM_AGE_GROWTH': 18,
+		'THIRD_AGE_GROWTH': 11,
+		'QUARTER_AGE_GROWTH': 7,
+	})
 ;
 let
+	BG_WIDTH		= 980,
+	BG_HEIGHT		= 850,
 	initialWidth	= sideWidth = 180,
 	initialHeight	= sideHeight = 90,
 	strokeColor		= 255,
@@ -35,10 +35,10 @@ let
 
 	rotationAngle	= sideAngle = .7,
 	edgeReduction	= sideEdge = .63,
-	widthReduction	= sideThick = .45,
-
-	sideSnapShot	= {}
+	widthReduction	= sideThick = .45
 ;
+
+new p5();
 
 
 function setup() 
@@ -67,7 +67,7 @@ function draw()
 
 		initialWidth	= 200;
 		initialHeight	= 100;
-	}else if(DATE_RANGE.THIRD_AGE_GROWTH >= Countdown.daysLeft && true === Countdown?.state)
+	}else if(DATE_RANGE.THIRD_AGE_GROWTH >= Countdown.daysLeft && DATE_RANGE.QUARTER_AGE_GROWTH < Countdown.daysLeft)
 	{
 		sideBeta		= 1;
 		sideAlpha		= 1;
@@ -80,7 +80,25 @@ function draw()
 		initialWidth	= 220;
 		initialHeight	= 110;
 		growthGuard		= 2;
-	}else if(false === Countdown?.state)
+	}else if(DATE_RANGE.QUARTER_AGE_GROWTH >= Countdown.daysLeft && true === Countdown?.state)
+	{
+		sideBeta		= 1;
+		sideAlpha		= 1;
+		sideWidth		= 210;
+		sideHeight		= 105;
+		sideAngle		= .5;
+
+		betaHeight		= 1;
+		alphaWidth		= 1;
+		initialWidth	= 230;
+		initialHeight	= 115;
+
+		growthGuard		= 4.49;
+
+		rotationAngle	= .54;
+		edgeReduction	= .665;
+		widthReduction	= .515;
+	}if(false === Countdown?.state)
 	{
 		sideBeta		= 1;
 		sideAlpha		= 1;
@@ -93,9 +111,9 @@ function draw()
 		initialWidth	= 240;
 		initialHeight	= 120;
 
-		growthGuard		= 2;
+		growthGuard		= 4.49;
 
-		rotationAngle	= .49;
+		rotationAngle	= .38;
 		edgeReduction	= .7;
 		widthReduction	= .58;
 	}
@@ -186,6 +204,7 @@ const Countdown	= {
 				_this.$seconds.textContent	= zeroPadding(_seconds);
 			},
 			onComplete: function(data){
+				stopRendering();
 				_this.state	= false;
 				
 				document.querySelector(`.iacontent`)
@@ -242,6 +261,11 @@ function doLerp(initial, target, step = .01)
 	if(target === initial) return target;
 
 	return initial + step;
+}
+
+async function stopRendering()
+{
+	await noLoop();
 }
 
 const myLogger        = () => {
