@@ -9,18 +9,32 @@
     
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/app.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<link type="image/png" sizes="96x96" rel="icon" href="favicon.png">
+
+	<link rel="stylesheet" href="./css/winter.min.css">
+    <link rel="stylesheet" href="./css/app.css">
 
     <!-- <script type="importmap" src="./js/importmap.js"></script> -->
     <script src="https://unpkg.com/p5@1.5.0/lib/p5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/yama-dev/js-count-module@v0.3.2/dist/js-count-module.js"></script>
-    <!-- <script src="https://unpkg.com/js-confetti@0.11.0/dist/js-confetti.min.js"></script> -->
 	<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
   </head>
 
   <body>
+	<!-- region @Mabdel200 snow-fall-project -->
+	<div class="snow" style="display:none;">
+		<div class="snow__layer"><div class="snow__fall"></div></div>
+		<div class="snow__layer"><div class="snow__fall"></div></div>
+		<div class="snow__layer">
+			<div class="snow__fall"></div>
+			<div class="snow__fall"></div>
+			<div class="snow__fall"></div>
+		</div>
+		<div class="snow__layer"><div class="snow__fall"></div></div>
+	</div>
+	<!-- endregion -->
+
 	<!-- region Final rendering -->
 	<div class="iacontent" style="display:none;">
 		<div class="ialoader">
@@ -32,6 +46,7 @@
 	</div>
 	<!-- endregion -->
     <div class="container flex flex-col clex-wrap items-center px-4 mx-auto">
+		<!-- region bokko maturity with countdown -->
 		<main>
 			<div id="arcade-container">
 				<div id="bokko-canvas">
@@ -52,7 +67,8 @@
 				</div>
 			</div>
 		</main>
-		
+		<!-- endregion -->
+
 		<footer>
 			<div class="mt-6">
 				<p class="text-muted">

@@ -20,13 +20,17 @@ a {
     color: #007bff;
 }
 
+.snow{
+	transition:all 5s ease;
+}
+
 /* region Final rendering */
 .iacontent{
     display : none;
     width : 100%;
     height : 100%;
     background-color : rgba(0, 0, 0, 0.7);
-    transition : all ease 0.5s;
+    transition : all 0.5s ease;
 
     position : fixed;
     z-index : 1;

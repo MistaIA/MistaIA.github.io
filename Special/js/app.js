@@ -10,7 +10,7 @@
 
 
 const
-	arcadeContainer	= document.querySelector(`#arcade-container`),
+	winterIsComing	= document.querySelector(`.snow`),
 	growingTimer	= document.querySelector(`#growing-countdown`),
 
 	currentDate		= new Date(),
@@ -202,6 +202,9 @@ const Countdown	= {
 				_this.$hours.textContent	= zeroPadding(_hours);
 				_this.$minutes.textContent	= zeroPadding(_minutes);
 				_this.$seconds.textContent	= zeroPadding(_seconds);
+
+				if(19 >= _days && `block` !== winterIsComing.style.display)
+					winterIsComing.style.display	= `block`;
 			},
 			onComplete: function(data){
 				stopRendering();
