@@ -4,6 +4,7 @@
 Visit the links below :
 * Special project [here](https://mistaia.github.io/Special)
 
+[Download My CV](Ismael_ABBO.pdf)
 
 Thanks.
 Kind regards.
